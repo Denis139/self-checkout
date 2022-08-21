@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS product
 
 CREATE TABLE IF NOT EXISTS checklist
 (
-    id         uuid                    not null
+    id         uuid                not null
         constraint checklist_pkey
             primary key,
     amount     decimal                 not null,
