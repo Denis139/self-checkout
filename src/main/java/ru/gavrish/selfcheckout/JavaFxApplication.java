@@ -4,19 +4,27 @@ import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
+import ru.gavrish.selfcheckout.controller.MyController;
+
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.EventObject;
 
 public class JavaFxApplication extends Application{
 
@@ -58,7 +66,7 @@ public class JavaFxApplication extends Application{
         return gridPane;
     }
 
-    private void addUIControls(GridPane gridPane) {
+    private void addUIControls(GridPane gridPane) throws IOException {
 
         Label headerLabel = new Label("Кофемат");
         headerLabel.setFont(Font.font("Times new roman", FontWeight.BOLD, 27));
@@ -109,6 +117,18 @@ public class JavaFxApplication extends Application{
         TextField search2 = new TextField();
         search2.setPrefHeight(40);
         gridPane.add(search2, 5, 1);
+
+//        Stage stage = new Stage();
+//        Parent root = FXMLLoader.load(
+//                MyController.class.getResource("YourClass.fxml"));
+//        stage.setScene(new Scene(root));
+//        stage.setTitle("My modal window");
+//        stage.initModality(Modality.WINDOW_MODAL);
+//        EventObject event = null;
+//        stage.initOwner(
+//                ((Node)event.getSource()).getScene().getWindow() );
+
+
 
         Label cart = new Label("Корзина");
         gridPane.add(cart, 0, 18);

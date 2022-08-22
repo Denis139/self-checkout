@@ -4,11 +4,9 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.gavrish.selfcheckout.model.dto.response.ChecklistResponse;
 import ru.gavrish.selfcheckout.model.dto.response.ProductResponse;
-import ru.gavrish.selfcheckout.model.entity.Checklist;
 import ru.gavrish.selfcheckout.service.CheckoutService;
 import ru.gavrish.selfcheckout.service.domain.ChecklistDomainService;
 import ru.gavrish.selfcheckout.service.domain.ProductDomainService;
-
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.UUID;
@@ -47,7 +45,6 @@ public class CheckoutServiceImpl implements CheckoutService {
 
     @Override
     public void deleteProduct(UUID productId, int count, UUID checklistId) {
-
     }
 
     @Override
